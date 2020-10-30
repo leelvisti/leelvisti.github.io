@@ -464,7 +464,210 @@ span {
   filter: grayscale(100%);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 349px) {
+  h3 {
+    font-size: 1rem;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  /* hamburger icon styling */
+  .hamburger {
+    top: 50%;
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #4d4d4d;
+    transition: 0.5s;
+  }
+
+  .hamburger:before {
+    top: -16px;
+  }
+
+  .hamburger:after {
+    top: 16px;
+    background-color: black;
+  }
+
+  .hamburger-container.active-one .hamburger-one {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+  }
+
+  .hamburger-container.active-one .hamburger-one:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .hamburger-container.active-one .hamburger-one:after {
+    top: 0;
+    transform: rotate(135deg);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .hamburger-container {
+    position: absolute;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger-one:before,
+  .hamburger-one:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #4d4d4d;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+
+  #menu-sidebar {
+     background-color: white;
+     height: 100vh;
+     display: none;
+     position: absolute;
+     z-index: 99;
+     position: fixed;
+     right: 0;
+     text-align: center;
+     width: 60%;
+  }
+
+  #name,
+  #command {
+    font-size: 1.5rem;
+  }
+
+  #main {
+    justify-content: left;
+    height: 500px;
+    margin-left: 10%;
+  }
+
+  #work-section,
+  #project-section {
+    height: 500px;
+  }
+
+  #work-section {
+     margin-left: 10%;
+  }
+
+  #about-section {
+    height: 1000px;
+  }
+
+  #bio {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15px;
+  }
+
+  .mobile-vertical {
+    flex-direction: column;
+  }
+
+  .section-title h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .section-title > h3:after {
+    width: 100px;
+  }
+
+  .grid {
+     margin-left: 7.5%;
+  }
+
+  .skills h3 {
+    font-size: 12px;
+  }
+
+  /* move timeline to left of screen instead of center */
+  .timeline {
+    transform: translateX(-150px);
+  }
+
+  #command,
+  #synopsis {
+    max-width: 300px;
+  }
+
+  .skills .skill-el {
+     font-size: 12px;
+  }
+
+  .subtitle {
+     display: flex;
+     justify-content: center;
+  }
+
+  .container {
+     max-width: 250px;
+  }
+
+  .project-content h4 {
+    font-size: 1.4rem;
+    color: black;
+  }
+
+  .project-content {
+    text-align: center;
+    position: relative;
+    width: 90vw;
+    margin-left: unset;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .project-tech {
+    justify-content: center;
+  }
+
+  .project-tech li {
+    color: black;
+  }
+
+  .project-links svg {
+    fill: black;
+  }
+
+  .project-links svg:hover {
+    height: 30px;
+    width: 30px;
+  }
+
+  .project-image img {
+    width: 90vw;
+    max-width: unset;
+    height: unset;
+    filter: grayscale(100%);
+  }
+
+  .project {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 350) and (max-width: 750px) {
   h3 {
     font-size: 1rem;
   }
